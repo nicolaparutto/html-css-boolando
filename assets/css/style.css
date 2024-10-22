@@ -39,6 +39,7 @@ header{
    position: fixed;
    width: 100%;
    top: 0;
+   z-index: 50;
 }
 /* navbar-style */
 .navbar{
@@ -83,8 +84,20 @@ main{
    position: relative;
    height: 80%;
 }
+.card-image:hover img.main-img{
+   display: none;
+}
+.card-image:hover img.second-img{
+   display: block;
+}
 .card-image img{
    width: 100%;
+}
+.card-image img.main-img{
+   display: block;
+}
+.card-image img.second-img{
+   display: none;
 }
 .card-image div.discount{
    display: flex;
