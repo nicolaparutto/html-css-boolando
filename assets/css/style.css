@@ -24,6 +24,7 @@
    border: 1px solid red;
    height: 500px;
 }
+
 /* ===main css=== */
 body{
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -74,10 +75,12 @@ main{
 .card-container{
    display: flex;
    justify-content: center;
+   flex-wrap: wrap;
 }
 .card{
-   width: 30%;
-   margin: 8px;
+   --spacing-m: 8px;
+   width: calc(100% / 3 - (var(--spacing-m) * 2));
+   margin: var(--spacing-m);
 }
 /* card image */
 .card-image{
@@ -146,4 +149,31 @@ div.discount span.sustainability{
 .price span{
    color: var(--c-lightgray);
    text-decoration: line-through;
+}
+
+/* =====footer style===== */
+footer{
+   padding: 30px 0px;
+   background-color: #1A1A1A;
+   color: var(--c-white);
+}
+.footer{
+   display: flex;
+   justify-content: space-between;
+}
+.footer span{
+   font-size: 0.9rem;
+}
+.footer ul{
+   display: flex;
+}
+.footer ul li{
+   list-style: none;
+}
+.footer ul li a{
+   padding-right: 10px;
+   font-size: 0.7rem;
+}
+.footer ul .socials{
+   font-size: 1.2rem;
 }
