@@ -1,0 +1,136 @@
+/* ===css reset=== */
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+/* ===proprietà definite=== */
+:root{
+   --c-white: #fff;
+   --c-black: #000;
+   --c-red: #FF0000;
+   --c-green: #008f39;
+   --c-main: #FF6902;
+   --c-lightgray: #757576;
+}
+
+/* ===utility=== */
+.container{
+   margin: 0 auto;
+   max-width: 900px;
+}
+.debug{
+   border: 1px solid red;
+   height: 500px;
+}
+/* ===main css=== */
+body{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a{
+   text-decoration: none;
+   color: var(--c-white);
+}
+
+/* =====header style===== */
+header{
+   background-color: var(--c-main);
+   position: fixed;
+   width: 100%;
+   top: 0;
+}
+/* navbar-style */
+.navbar{
+   display: flex;
+   justify-content: space-between;
+   padding: 15px;
+}
+nav ul{
+   display: flex;
+}
+nav ul li{
+   list-style: none;
+   padding-right: 10px;
+}
+nav ul li a:hover{
+   text-decoration: underline;
+}
+.logo{
+   width: 120px;
+   height: 25px;
+}
+.right-navbar a{
+   font-size: 1.1rem;
+   padding: 5px;
+}
+
+/* =====main style===== */
+main{
+   margin-top: 100px;
+}
+/* card-style */
+.card-container{
+   display: flex;
+   justify-content: center;
+}
+.card{
+   width: 30%;
+   margin: 8px;
+}
+/* card image */
+.card-image{
+   position: relative;
+   height: 80%;
+}
+.card-image img{
+   width: 100%;
+}
+.card-image div.discount{
+   display: flex;
+   color: var(--c-white);
+   position: absolute;
+   left: 0;
+   bottom: 40px;
+}
+.card-image div.discount span{
+   margin-right: 5px;
+   padding: 3px 10px;
+}
+div.discount span.drop{
+   background-color: var(--c-red);
+}
+div.discount span.sustainability{
+   background-color: var(--c-green);
+}
+.card-image .heart{
+   background-color: var(--c-white);
+   padding: 10px 10px;
+   position: absolute;
+   right: 0;
+   top: 10px;
+}
+.card-image .heart:hover{
+   color: var(--c-red);
+}
+/* card test */
+.card-text{
+   height: 20%;
+   padding-top: 10px;
+   padding-bottom: 15px;
+}
+.card-text .brand{
+   color: var(--c-lightgray);
+   font-size: 0.8rem;
+}
+.card-text .dress-name{
+   text-transform: uppercase;
+   font-size: 0.9rem;
+}
+.card-text .price{
+   color: var(--c-red);
+}
+.price span{
+   color: var(--c-lightgray);
+   text-decoration: line-through;
+}
